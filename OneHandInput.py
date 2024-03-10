@@ -9,7 +9,7 @@ detector = HandDetector(maxHands=1)
 offset = 20
 imgSize = 300
 
-folder = "ISL-dataset/Data/A"
+folder = "Data/0"
 counter = 0
 
 while True:
