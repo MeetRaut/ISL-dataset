@@ -13,4 +13,5 @@ Dependencies
 pip install cvzone
 pip install numpy
 pip install opencv
+pip install mediapipe
 ```
