@@ -6,8 +6,8 @@ import time
 
 cap = cv2.VideoCapture(1)
 detector = HandDetector(maxHands=2)
-offset = 20
-imgSize = 300
+offset = 30  # Increase the offset for a wider frame
+imgSize = 350  # Increase the imgSize for a larger image
 
 folder = "ISL-dataset/Data/A"
 counter = 0
@@ -41,7 +41,15 @@ while True:
     cv2.imshow("ImageWhite", imgWhite)
     cv2.imshow("Image", img)
     key = cv2.waitKey(1)
+    
     if key == ord('s'):
         counter += 1
         cv2.imwrite(f'{folder}/Image_{time.time()}.jpg', imgWhite)
         print(counter)
+    
+    elif key == ord('q'):
+        break  # Exit the loop if 'q' is pressed
+
+# Release the camera and close all windows
+cap.release()
+cv2.destroyAllWindows()
