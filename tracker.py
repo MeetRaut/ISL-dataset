@@ -2,11 +2,15 @@ import cv2
 from cvzone.HandTrackingModule import HandDetector
 import numpy as np
 import math
+import time
 
 cap = cv2.VideoCapture(1) 
 detector = HandDetector(maxHands=1)
 offset=20  # To draw the pink box a little outside rather than touching te fingers
 imgSize=300  #Initially setting it to 300
+
+folder = "Data/A"
+counter=0
 
 while True:
     success,img = cap.read()  #Read from capture device and store it in img
@@ -36,11 +40,16 @@ while True:
             imgResize=cv2.resize(imgCrop, (imgSize, hCalc)) 
             imgResizeShape = imgResize.shape
             hGap=math.ceil((imgSize-hCalc)/2)
-            imgWhite[hGap+hCalc+hGap,:]=imgResize
+            imgWhite[hGap : hGap + hCalc, :] = imgResize
+
             
         
         cv2.imshow("ImageCropped", imgCrop)
         cv2.imshow("ImageWhite", imgWhite)
     cv2.imshow("Image", img)
-    cv2.waitKey(1)
+    key= cv2.waitKey(1)
+    if key ==ord('s'):
+        counter+=1
+        cv2.imwrite(f'{folder}/Image_{time.time()}.jpg',imgWhite)
+        print (counter)
     
