@@ -9,7 +9,7 @@ detector = HandDetector(maxHands=1)
 offset = 20
 imgSize = 300
 
-folder = "Data/2"
+folder = "Data/7"
 counter = 0
 
 while True:
@@ -46,7 +46,7 @@ while True:
     cv2.imshow("Image", img)
     key = cv2.waitKey(1)
 
-    if key == ord('s'):
+    if key == ord('0'):
         counter += 1
         cv2.imwrite(f'{folder}/Image_{time.time()}.jpg', imgWhite)
         print(counter)
