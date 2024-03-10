@@ -9,7 +9,7 @@ detector = HandDetector(maxHands=2)
 offset = 30  # Increase the offset for a wider frame
 imgSize = 350  # Increase the imgSize for a larger image
 
-folder = "Data/A"
+folder = "Data/R"
 counter = 0
 
 while True:
@@ -42,7 +42,7 @@ while True:
     cv2.imshow("Image", img)
     key = cv2.waitKey(1)
     
-    if key == ord('s'):
+    if key == ord('0'):
         counter += 1
         cv2.imwrite(f'{folder}/Image_{time.time()}.jpg', imgWhite)
         print(counter)
