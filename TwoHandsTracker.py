@@ -4,12 +4,12 @@ import numpy as np
 import math
 import time
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture(1)
 detector = HandDetector(maxHands=2)
 offset = 30  # Increase the offset for a wider frame
 imgSize = 350  # Increase the imgSize for a larger image
 
-folder = "ISL-dataset/Data/A"
+folder = "Data/A"
 counter = 0
 
 while True:
