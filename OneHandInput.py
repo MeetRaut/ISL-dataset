@@ -45,7 +45,15 @@ while True:
     cv2.imshow("ImageWhite", imgWhite)
     cv2.imshow("Image", img)
     key = cv2.waitKey(1)
+
     if key == ord('s'):
         counter += 1
         cv2.imwrite(f'{folder}/Image_{time.time()}.jpg', imgWhite)
         print(counter)
+    
+    if key == ord('q'):
+        break  # exit the loop if 'q' is pressed
+
+# Release the camera and close all windows
+cap.release()
+cv2.destroyAllWindows()
