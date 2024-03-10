@@ -9,7 +9,7 @@ detector = HandDetector(maxHands=2)
 offset = 30  # Increase the offset for a wider frame
 imgSize = 350  # Increase the imgSize for a larger image
 
-folder = "Data/Z"
+folder = "Data/R"
 counter = 0
 
 while True:
