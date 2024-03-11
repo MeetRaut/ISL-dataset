@@ -1,5 +1,4 @@
-# ISL-dataset
-Dataset for our ISL to English translator ML project
+ISL to English translator ML project
 
 Reference videos and links: 
 
