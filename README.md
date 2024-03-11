@@ -1,11 +1,10 @@
 # ISL-dataset
 Dataset for our ISL to English translator ML project
 
-DATASET 1: 
+Reference videos and links: 
 
 ```bash
-https://youtu.be/8wj0D_wCf3g?si=MS30Td7G4KuhbStq
-https://drive.google.com/drive/folders/1keWr7-X8aR4YMotY2m8SlEHlyruDDdVi
+https://youtu.be/wa2ARoUUdU8?si=tCCyhTOgNxYHMRkc
 ```
 
 Dependencies
